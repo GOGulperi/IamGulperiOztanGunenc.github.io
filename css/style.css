@@ -1,0 +1,434 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #474748;
+  font-family: 'Lato', sans-serif;
+}
+
+.subtitle {
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #5D5D5D;
+  line-height: 1.6;
+  display: block;
+
+}
+
+h1 {
+  color: #3A5185;
+  font-size: 2.0rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  color: #3A5185;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+  color: #0c1a1b;
+  font-size: 2.0rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+
+h4,
+.h4 {
+  color: #3A8285;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.button-container {
+  text-align: center;
+}
+
+
+.button {
+  display: inline-block;
+  background-color: #CBFF88;
+  color: #000;
+  font-weight: 400;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border-bottom: 2px solid #B6CFFF;
+  /* width of the border, type, color */
+  transition: 0.2s opacity;
+  text-decoration: none;
+  align-items: center;
+  
+}
+
+.button:visited {
+  color: #3A5185;
+}
+
+.button:hover,
+.button:focus {
+  opacity: 0.7;
+  transition-duration: 0.8s;
+}
+
+.button:active {
+  font-weight: 700;
+}
+
+a {
+  
+  color:#bfbfbf;
+}
+
+a:visited {
+  
+  color: #bfbfbf;
+}
+
+a:hover,
+a:focus {
+  color: #e4e4e4;
+}
+
+a:active {
+  color: #CBFF88;
+}
+
+/* ===================
+HEADER Styling
+==================== */
+header {
+  background-color: #131313f4;
+
+  padding: 10px 0;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+}
+
+
+a.logo {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+nav>ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  line-height: 0px;
+  display: flex;
+}
+
+
+nav>ul>li {
+  display: inline-block;
+  line-height: 1.5;
+}
+
+nav>ul>li>a {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #bfbfbf;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em 0.5em;
+}
+
+nav>ul>li>a:visited {
+  color: #bfbfbf;
+
+}
+
+nav .button:hover,
+nav>ul>li>a:hover{
+  color:  #e4e4e4;
+
+}
+
+nav .active{
+  color: #CBFF88 !important;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.icon svg{
+  width: 2em;
+  fill: #CBFF88;
+}
+.navtoggle{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  }
+
+
+#myNavtoggle{
+  
+}
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+ 
+}
+
+nav{
+  display: inline-block;
+  width: 100%;
+}
+
+
+
+.navtoggle.responsive li{
+  display: block;
+}
+
+.navtoggle.responsive ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+
+.account::before {
+  font: var(--fa-font-solid);
+  content: '\f007';
+}
+
+.warning::before {
+  font: var(--fa-font-regular);
+  content: '\f071';
+}
+
+.updates::before {
+  font: var(--fa-font-light);
+  content: '\f1ea';
+}
+
+/* an example rule targeting any element with the "contact" class to render fa-message icon in the Thin style */
+.updates::before {
+  font: var(--fa-font-thin);
+  content: '\f27a';
+}
+
+/* an example rule targeting any element with the "delete" class to render fa-trash icon in the Sharp Solid style */
+.delete::before {
+  font: var(--fa-font-sharp-solid);
+  content: '\f1f8';
+}
+
+/* an example rule targeting any element with the "add" class to render fa-circle-plus icon in the Sharp Regular style */
+.add::before {
+  font: var(--fa-font-sharp-regular);
+  content: '\f055';
+}
+
+/* an example rule targeting any element with the "gaming" class to render fa-discord Brand icon */
+.gaming::before {
+  font: var(--fa-font-brands);
+  content: '\f392';
+}
+
+/* an example rule targeting any element with the "custom-icon" class to render a custom icon (uploaded to a kit) */
+.custom-icon::before {
+  font-family: 'Font Awesome Kit'; /* note that you need to use "font-family" for custom icons */
+  content: '\[CUSTOM*ICON_UNICODE]'; /* replace with custom icon's unicode value \*/
+}
+
+
+
+/* ===================
+Layout Styling
+==================== */
+
+main {
+  /* padding-top: 120px; */
+  padding-top: 84px;
+
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+
+}
+
+section {
+  padding-block: 6rem;
+}
+
+
+
+
+
+
+/* ===================
+Social-Footer
+==================== */
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.social a {
+  text-decoration: none;
+  line-height: 0;
+  background: #efefef;
+  padding: 1rem;
+  border-radius: 50vw;
+  transition: all 0.3s ease-in-out;
+}
+
+.social svg {
+  width: 3rem;
+}
+
+.social a:hover svg {
+  fill: #474748;
+}
+
+footer .container {
+  align-items: center;
+  text-align: center;
+  border-top: 2px solid #000;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+}
+
+/* ===================
+Header-logo
+==================== */
+.logo-style{
+  text-decoration: none;
+  font-size: 2.5em;
+  font-weight: 400;
+  color:#efefef;
+  font-family: "Cookie";
+
+}
+
+
+
+/* ===================
+project page
+==================== */
+
+.hero-content {
+  text-align: center;
+}
+
+.project-intro {
+  display: flex;
+  gap: 4rem;
+}
+
+.project-intro > * {
+  width: 33.33%;
+}
+
+.project-details {
+  display: flex;
+  gap: 4rem;
+}
+
+.project-details > * {
+  width: 50%;
+}
+
+#overview {
+  padding-block-end: 0;
+}
+#overview .container {
+  gap: 4rem;
+}
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+
+@media only screen and (min-width: 640px) {
+
+  #hero span {
+    display: block;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+  .navtoggle li:last-child {
+    display: none;
+  }
+  .navtoggle {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav{
+    width: auto;
+
+  }
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+  
+}
+
+/* ==============================
+Extra-large devices (1920px or larger)
+================================= */
+@media only screen and (min-width: 1920px) {
+
+}
+
+
+
